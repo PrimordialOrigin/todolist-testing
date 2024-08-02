@@ -4,9 +4,11 @@ import { render, screen  } from '@testing-library/react';
 import TodoList from './Todolist';
 import mockData from '../../mockData';
 
-describe('todo list test', () => {
-  it('should show title of todos', () => {
+describe("todo list test", () => {
+  it("should show title of todos", () => {
     render(<TodoList todos={mockData} />);
-    mockData.forEach((d) => expect(screen.getByText(d.title)).toBeInTheDocument());
+    mockData.forEach((d) =>
+      expect(screen.getByText(d.title)).toBeInTheDocument()
+    );
   });
 });
