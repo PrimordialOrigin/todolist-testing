@@ -1,21 +1,53 @@
 .itemContainer {
-    display: flex;
-    justify-content: space-between; 
+    background-color: #1f2123;
+    color: #ffffff;
+    padding: 15px;
     margin: 15px 0;
-}
-
-.completed {
-    text-decoration: line-through;
-}
-
-.closeBtn {
-    color: red;
-    font-weight: 800;
-    font-size: 16px;
-    background: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .itemContainer label {
+    font-size: 1.2em;
+    margin-right: 15px;
+    flex: 1;
+  }
+  
+  .itemContainer .buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .closeBtn, .editBtn {
+    background-color: #165361;
+    color: #ffffff;
     border: none;
-}
-
-.closeBtn:hover {
+    padding: 8px 15px;
     cursor: pointer;
-}
+    border-radius: 5px;
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+  
+  .closeBtn:hover, .editBtn:hover {
+    background-color: #1db18f;
+  }
+  
+  .editBtn {
+    background-color: #1db18f;
+  }
+  
+  .editBtn:hover {
+    background-color: #165361;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
