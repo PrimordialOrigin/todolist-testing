@@ -8,6 +8,10 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
 
+  function editTodo(id, newTitle) {
+    setTodos(todos.map(todo => (todo.id === id ? { ...todo, title: newTitle } : todo)));
+  }
+
   function addTodo(e) {
     e.preventDefault();
     const value = {
@@ -67,7 +71,7 @@ function App() {
   return (
     <div className="App">
       <h1 className='header'>My todo list</h1>
-      {loading ? "Loading" : <TodoList todos={todos} removeHandler={removeTodo} updateTodo={updateTodo} />}
+      {loading ? "Loading" : <TodoList todos={todos} removeHandler={removeTodo} updateTodo={updateTodo} editTodo={editTodo} />}
       
       <div className='add-todo-form'>
         {saving ? "Saving" : (
